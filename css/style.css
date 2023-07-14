@@ -48,23 +48,32 @@ main {
 
 .about-text {
     grid-area: 1 / 1 / 2 / 6;
-    background-image: url('/images/banner.jpg');
+    /* background-image: url('/images/banner.jpg'); */
     height: 52vh !important;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center; */
     padding: 8rem;
 
 }
 
+.about-text img {
+    position: absolute;
+    z-index: -999;
+    padding: 0%;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
 .about-text p {
     text-align: center;
-    background-color: #ff999987;
+    background-color: #ff99999f;
     padding: 10vh;
     margin-top: 10vh;
-    font-family: flowers;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 200%;
-    font-weight: 800;
+
 
 }
 
@@ -96,56 +105,72 @@ main {
     text-align: center;
 }
 
-.selection-images{
+.selection-images {
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-    width: 60%;
+    width: 80%;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 .selection-images img {
-    width: 30%;
+    background-color: rgb(250, 215, 215);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: #6bb36b;
+    border-width: 0.3rem;
+    border-style: solid;
+    width: 25%;
 
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     .selection-images img {
         width: 50%;
-    
+
     }
 
     .selection-images {
         width: 100%;
     }
-    
+
 }
 
 
-.location-text {
-    width: 15rem;
-    text-align: center;
-    
+.location {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+
 }
 
 .location-image {
-  
-
-
+    width: 40%;
+    background-color: rgb(250, 215, 215);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: #6bb36b;
+    border-width: 0.3rem;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #location-image {
     object-fit: cover;
-    width: 20rem;
+    width: 100%;
 
 }
 
 .location-map {
-   
-}
+   width: 40%;
 
-#location-map {}
+}
 
 footer {
     background-color: #6bb36b;
